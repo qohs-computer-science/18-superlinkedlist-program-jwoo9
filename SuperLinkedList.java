@@ -55,14 +55,26 @@ public class SuperLinkedList extends LinkedList<String> {
     } //end method removeDuplicates
 
     public LinkedList<String> concatenateStrings() {
-
-        return null;
-    }
+        ListIterator <String> iter = this.listIterator();
+        LinkedList <String> retList = new LinkedList<String>();
+        String concat = "";
+        while (iter.hasNext()){
+            concat +=iter.next();
+            retList.add(concat);
+        } //end while
+        return retList;
+    } //end method concatenateStrings
 
     public LinkedList<String> mix(LinkedList<String> list2) {
-
-        return null;
-    }
+        LinkedList <String> retList = new LinkedList<String>();
+        ListIterator <String> iter = this.listIterator();
+        ListIterator <String> iter2 = list2.listIterator();
+        while (iter.hasNext()){
+            retList.add(iter.next());
+            retList.add(iter2.next());
+        }//end while
+        return retList;
+    }//end method mix
 
     public String toString() {
         ListIterator <String> iter = this.listIterator();
